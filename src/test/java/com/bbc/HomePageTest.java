@@ -8,21 +8,13 @@ public class HomePageTest extends TestData {
 	public void testDriver() {
 		Assert.assertEquals(driver, driver);	
 	}
-	
-	@Test(enabled = false, groups = {"products", "regression", "all"}, priority = 0)
-	public void testOpenLogInPopUp()  {
-		String expected = "login";
-		String actual = "";
-		actual = common.opeLogInPopUp();
-		Assert.assertEquals(actual, expected, "Button LOGIN lable doesn't match expected");	
-	}
  
 	@Test(enabled = true, groups = {"products", "regression", "all"}, priority = 0)
-	public void testNavigateToAllProductsPage() {
-		String expected = "https://www.bbc.com/products";
+	public void testNavigateHomePage() {
+		String expected = "https://www.bbc.com/";
 		String actual = "";
-		actual = common.navigateToAllProductsPage();
-		Assert.assertEquals(actual, expected, "URI doesn't match to All Products page");
+		actual = common.navigateToHomePage();
+		Assert.assertEquals(actual, expected, "URI doesn't match to Home page");
 	}
 	
 	@Test(enabled = true, groups = {"products", "regression", "all"}, priority = 0)
@@ -41,7 +33,6 @@ public class HomePageTest extends TestData {
 		Assert.assertEquals(actual, expected, "URI doesn't match to Testmonials page");
 	}
 
-// SERVICES pages
 	@Test(enabled = true, groups = {"products", "regression", "all"}, priority = 0)
 	public void testNavigateToOurServicesPage() {
 		String expected = "https://www.bbc.com/pages/services";
