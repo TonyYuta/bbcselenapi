@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Code Coverage">
+	<!-- <parameter name="browser" value="chrome" />  -->
+	<!-- <parameter name="baseUrl" value="http://stackoverflow.com" /> -->
+	<!-- <parameter name="groups" value="all" /> -->
+	<!-- <parameter name="driverType" value="chrome" /> -->
+    <test name="prod" preserve-order="true">
+        <classes>
+            <class name="com.bbc.HomePageTest"/>
+            <class name="com.bbc.NewsPageTest"/>
+            <class name="com.bbc.WeatherPageTest"/>
+            <class name="com.bbc.SignInPage"/>
+            <class name="com.bbc.SportPageTest"/>
+            
+            <!-- <class name="com.connectedio.LoginTest"/> -->
+        </classes>
+    </test>
+</suite>
