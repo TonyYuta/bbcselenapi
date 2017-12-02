@@ -29,6 +29,10 @@ public class DriverFactory {
 	// it is synchronized for multi Threading safety
 	public static synchronized WebDriver getDriver(String driverType) {
 	// beautifying the input
+		
+// temporary for debug
+driverType = "firefox";
+		
 	driverType = driverType.trim().toLowerCase();
 	
 	DesiredCapabilities capabilities;
