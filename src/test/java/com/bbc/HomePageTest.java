@@ -1,14 +1,39 @@
 package com.bbc;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class HomePageTest extends TestData {
+	
+	Common common;
+	
+	@BeforeClass(enabled = true, alwaysRun = true)
+	public void beforeClassSetUp() {
+		common = new Common(driver);
+	}
+	
+	@AfterClass(enabled = true, alwaysRun = true)
+	public void afterClassTearDown() {
+		
+	}
+	
+	@BeforeMethod(alwaysRun = true)
+	public void beforeTestSetUp() {
+		
+	}
+	
+	@AfterMethod(enabled = true, alwaysRun = true)
+	public void afterTest() {
+		
+	}
 
 	@Test(enabled = false, groups = {"driver", "regression", "all"}, priority = 0)
 	public void testDriver() {
-		AssertJUnit.assertEquals(driver, driver);	
+		Assert.assertEquals(driver, driver);	
 	}
  
 	@Test(enabled = true, groups = {"products", "regression", "all"}, priority = 0)
@@ -16,7 +41,7 @@ public class HomePageTest extends TestData {
 		String expected = "https://www.bbc.com/";
 		String actual = "";
 		actual = common.navigateToHomePage();
-		AssertJUnit.assertEquals(actual, expected, "URI doesn't match to Home page");
+		Assert.assertEquals(actual, expected, "URI doesn't match to Home page");
 	}
 	
 	

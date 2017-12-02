@@ -7,6 +7,9 @@
  */
 
 package com.bbc;
+
+import org.openqa.selenium.WebDriver;
+
 /**
  * SignInPage //ADDD (description of class)
  * <p>
@@ -20,5 +23,9 @@ package com.bbc;
  *
  */
 public class SignInPage extends Common {
+	
+	public SignInPage(WebDriver driver) {
+		super(driver);
+	}
 
 }

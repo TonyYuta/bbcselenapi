@@ -8,6 +8,8 @@
 
 package com.bbc;
 
+import org.openqa.selenium.WebDriver;
+
 /**
  * NewsPage //ADDD (description of class)
  * <p>
@@ -21,5 +23,9 @@ package com.bbc;
  *
  */
 public class NewsPage extends Common {
+	
+	public NewsPage(WebDriver driver) {
+		super(driver);
+	}
 
 }
