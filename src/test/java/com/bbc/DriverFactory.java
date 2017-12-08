@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /** @author Yutaka */
@@ -31,7 +29,8 @@ public class DriverFactory {
 	// beautifying the input
 		
 // temporary for debug
-driverType = "chrome";
+//driverType = "chrome";
+//driverType = "firefox";		
 		
 	driverType = driverType.trim().toLowerCase();
 	
@@ -41,6 +40,7 @@ driverType = "chrome";
 	switch (driverType) {
 		case "chrome":
 		    System.setProperty("webdriver.chrome.driver", "/Library/chromedriver");
+			//System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/resources/webdrivers/mac/chromedriver");
 			capabilities = DesiredCapabilities.chrome();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("test-type");
@@ -64,6 +64,9 @@ driverType = "chrome";
 		   // driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 			break;
 			
+			
+			
+	/*		
 		case "phantom":
 			//PhanthomJS driver 
 			//System.setProperty("phantomjs.binary.path", System.getProperty("user.dir")+"/Library/phantomjs");
@@ -77,7 +80,11 @@ driverType = "chrome";
 			driver = new PhantomJSDriver(phantomCaps);
 			driver.manage().window().setSize(new Dimension(1920, 1080));
 	        break;
-				
+		*/
+			
+			
+			
+			
 		default:
 			String msg = "Unknown driver type";
 			throw new IllegalArgumentException(msg);

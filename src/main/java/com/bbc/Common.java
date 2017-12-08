@@ -31,7 +31,7 @@ public class Common {
 	
 	//cssSelector
 	public String homePageTab = "#orb-nav-links > ul > li.orb-nav-homedotcom.orb-w > a";
-	public String welcomeToBbcomLabel = ".module.module--date.module--highlight > .module__title";
+	public String welcomeToBbComLabel = ".module.module--date.module--highlight > .module__title";
 	
 	
 	// id
@@ -44,10 +44,22 @@ public class Common {
 	}
 	
 	public String navigateToHomePage() {
+		
+System.out.println("====== debug1 ==============");
 		String result = "Welcome to BBC.com";
-		we = driver.findElement(By.cssSelector(homePageTab));
+		
+System.out.println("======= debug2 ===== we.getText() =========") ;
+
+		//we = driver.findElement(By.cssSelector(homePageTab));
+		driver.findElement(By.cssSelector("#orb-nav-links > ul > li.orb-nav-homedotcom.orb-w > a")).click();
+System.out.println("======= debug3 ===== we.getText() =========" + we.getText()) ;
+
 		we.click();
-		we = driver.findElement(By.cssSelector(welcomeToBbcomLabel));
+System.out.println("======= debug4 ===== we.getText() =========" + we.getText()) ;
+
+		we = driver.findElement(By.cssSelector(welcomeToBbComLabel));
+System.out.println("======= debug5 ===== we.getText() =========" + we.getText()) ;
+
 		return result = we.getText();
 	}
 //	

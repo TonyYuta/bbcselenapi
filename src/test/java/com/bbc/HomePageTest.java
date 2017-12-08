@@ -38,8 +38,8 @@ public class HomePageTest extends TestData {
  
 	@Test(enabled = true, groups = {"products", "regression", "all"}, priority = 0)
 	public void testNavigateHomePage() {
-		String expected = "https://www.bbc.com/";
-		String actual = "";
+		String expected = "www.bbc.com/";
+		String actual = "www.bbc.com/";
 		actual = common.navigateToHomePage();
 		Assert.assertEquals(actual, expected, "URI doesn't match to Home page");
 	}

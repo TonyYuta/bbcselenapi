@@ -40,7 +40,7 @@ public class TestData {
 	public String validEmail01 			= "yutakatony@mail.com"; 
 	public String validPwd01 			= "vitoto";  
 
-	public String homePageUrl 			= "https://www.connectedio.com/";
+	public String homePageUrl 			= "https://http://www.bbc.com/";
 
 	public static int TIME1 = 10;
 	public static int TIME2 = 200;
@@ -79,7 +79,6 @@ public class TestData {
     	try {
 			driver = driverFactory.getDriver(BROWSER); // browser type received from CLO
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     	common = new Common(driver);
