@@ -31,7 +31,7 @@ public class DriverFactory {
 	// beautifying the input
 		
 // temporary for debug
-//driverType = "chrome";
+driverType = "chrome";
 		
 	driverType = driverType.trim().toLowerCase();
 	
